@@ -1,13 +1,46 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from 'react';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import Collections from '@/components/Collections';
+import About from '@/components/About';
+import Lookbook from '@/components/Lookbook';
+import Journal from '@/components/Journal';
+import Newsletter from '@/components/Newsletter';
+import Footer from '@/components/Footer';
 
 const Index = () => {
+  useEffect(() => {
+    // Intersection Observer for animations
+    const animatedElements = document.querySelectorAll('.animate-fade-in, .animate-fade-in-up, .animate-fade-in-left');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Keep the opacity class but add the animation class
+          entry.target.classList.remove('opacity-0');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    animatedElements.forEach(el => observer.observe(el));
+    
+    return () => {
+      animatedElements.forEach(el => observer.unobserve(el));
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="w-full min-h-screen overflow-x-hidden">
+      <Navbar />
+      <Hero />
+      <Collections />
+      <About />
+      <Lookbook />
+      <Journal />
+      <Newsletter />
+      <Footer />
+    </main>
   );
 };
 
