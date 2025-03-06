@@ -1,73 +1,47 @@
 
-import { useState } from 'react';
-import { cn } from '@/lib/utils';
-import { ArrowRight } from 'lucide-react';
-
 const collections = [
   {
     id: 1,
-    title: 'Street Essentials',
-    description: 'Urban silhouettes redefined with premium fabrics and contemporary cuts.',
-    image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=1964&auto=format&fit=crop',
-    color: 'bg-urban-900',
+    title: 'Essentials',
+    image: 'https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?q=80&w=2070&auto=format&fit=crop',
   },
   {
     id: 2,
-    title: 'Monochrome Series',
-    description: 'Timeless color stories for the modern minimalist wardobe.',
-    image: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=2070&auto=format&fit=crop',
-    color: 'bg-urban-800',
+    title: 'Outerwear',
+    image: 'https://images.unsplash.com/photo-1591369822096-ffd140ec948f?q=80&w=1974&auto=format&fit=crop',
   },
   {
     id: 3,
-    title: 'Technical Outerwear',
-    description: 'Function meets form with weather-ready pieces designed for urban life.',
-    image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1936&auto=format&fit=crop',
-    color: 'bg-urban-700',
+    title: 'Accessories',
+    image: 'https://images.unsplash.com/photo-1523206489230-c012c64b2b48?q=80&w=1974&auto=format&fit=crop',
   },
 ];
 
 const Collections = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  
   return (
-    <section id="collections" className="py-24 bg-secondary">
-      <div className="urban-container">
-        <div className="mb-16 opacity-0 animate-fade-in">
-          <span className="text-edge-600 text-sm font-medium">DISCOVER</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mt-2">Featured Collections</h2>
+    <section id="collections" className="py-16 bg-gray-100">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <span className="text-blue-600 font-medium text-sm uppercase tracking-wide">Shop</span>
+          <h2 className="text-3xl font-bold mt-2 text-gray-900">Our Collections</h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {collections.map((collection, index) => (
-            <div 
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {collections.map((collection) => (
+            <a 
               key={collection.id}
-              className={cn(
-                "group cursor-pointer overflow-hidden relative opacity-0",
-                `animate-fade-in animation-delay-${index * 200}`
-              )}
-              onMouseEnter={() => setActiveIndex(index)}
+              href="#"
+              className="group block"
             >
-              <div className="image-wrapper aspect-[4/5]">
+              <div className="overflow-hidden">
                 <img 
                   src={collection.image} 
                   alt={collection.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              
-              <div className={cn(
-                "absolute bottom-0 left-0 right-0 p-6 transition-all duration-500",
-                "bg-gradient-to-t from-black/80 to-transparent text-white",
-                "transform translate-y-0 group-hover:translate-y-0"
-              )}>
-                <h3 className="font-display text-2xl font-semibold">{collection.title}</h3>
-                <p className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">{collection.description}</p>
-                <a href="#" className="mt-4 inline-flex items-center text-white/90 hover:text-white group-hover:opacity-100 opacity-0 transition-opacity duration-500">
-                  Explore Collection <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </div>
-            </div>
+              <h3 className="mt-4 text-xl font-medium text-center text-gray-900">{collection.title}</h3>
+            </a>
           ))}
         </div>
       </div>

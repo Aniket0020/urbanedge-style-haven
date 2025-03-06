@@ -1,42 +1,26 @@
 
-import { ArrowRight } from 'lucide-react';
-
 const About = () => {
   return (
-    <section id="about" className="py-24">
-      <div className="urban-container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 opacity-0 animate-fade-in-left">
-            <span className="text-edge-600 text-sm font-medium">OUR STORY</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold">The Edge of Urban Design</h2>
-            <p className="text-urban-600 text-lg leading-relaxed">
-              Founded in 2018, UrbanEdge was born out of a desire to create clothing that balances minimalist design principles with the raw energy of urban life.
+    <section id="about" className="py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <span className="text-blue-600 font-medium text-sm uppercase tracking-wide">About Us</span>
+            <h2 className="text-3xl font-bold mt-2 text-gray-900">Simplicity in Design</h2>
+            <p className="mt-6 text-gray-600">
+              Founded with a simple mission: to create timeless clothing that lasts. We focus on quality materials, clean design, and sustainable practices.
             </p>
-            <p className="text-urban-600 leading-relaxed">
-              Our design ethos is guided by a commitment to quality materials, sustainable practices, and timeless silhouettes that transcend seasonal trends. Each piece in our collection is meticulously crafted to provide versatility and longevity in your wardrobe.
+            <p className="mt-4 text-gray-600">
+              Every piece in our collection is designed to be versatile, comfortable, and durable - clothing that becomes a part of your everyday story.
             </p>
-            <p className="text-urban-600 leading-relaxed">
-              We believe clothing should be an expression of individual identity while maintaining a strong connection to the urban environment that inspires us daily.
-            </p>
-            <div className="pt-4">
-              <a href="#" className="urban-button-outline inline-flex items-center">
-                Learn More <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
-            </div>
           </div>
           
-          <div className="relative opacity-0 animate-fade-in animation-delay-400">
+          <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?q=80&w=1965&auto=format&fit=crop" 
-              alt="UrbanEdge atelier" 
-              className="w-full h-[600px] object-cover"
+              src="https://images.unsplash.com/photo-1579447892067-33f3c984d35d?q=80&w=2069&auto=format&fit=crop"
+              alt="Our design studio" 
+              className="w-full h-[400px] object-cover"
             />
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 shadow-lg max-w-xs">
-              <p className="font-display text-lg font-medium">
-                "We don't follow trends. We create timeless pieces that become part of your personal expression."
-              </p>
-              <p className="mt-4 text-urban-500 text-sm">Alex Chen, Creative Director</p>
-            </div>
           </div>
         </div>
       </div>

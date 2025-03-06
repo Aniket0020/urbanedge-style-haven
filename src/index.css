@@ -1,130 +1,13 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 210 50% 98%;
-    --foreground: 210 50% 10%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 210 50% 10%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 50% 10%;
-
-    --primary: 210 50% 10%;
-    --primary-foreground: 210 50% 98%;
-
-    --secondary: 210 30% 96%;
-    --secondary-foreground: 210 50% 10%;
-
-    --muted: 210 30% 96%;
-    --muted-foreground: 210 40% 50%;
-
-    --accent: 220 70% 60%;
-    --accent-foreground: 210 50% 98%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 210 50% 90%;
-    --input: 210 50% 90%;
-    --ring: 210 50% 10%;
-
-    --radius: 0.5rem;
-  }
-
-  * {
-    @apply border-border;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
-
-  /* Custom scrollbar */
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-secondary;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-urban-400 rounded-full;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-urban-500;
-  }
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@layer components {
-  .urban-container {
-    @apply px-4 md:px-8 max-w-7xl mx-auto;
-  }
-  
-  .urban-button {
-    @apply inline-flex items-center justify-center rounded-none
-      px-6 py-3 text-sm font-semibold
-      bg-primary text-primary-foreground
-      hover:bg-urban-700 transition-colors duration-300
-      focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 
-      focus-visible:outline-primary;
-  }
-
-  .urban-button-outline {
-    @apply inline-flex items-center justify-center rounded-none
-      px-6 py-3 text-sm font-semibold
-      border border-primary text-primary
-      hover:bg-primary hover:text-primary-foreground transition-colors duration-300
-      focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 
-      focus-visible:outline-primary;
-  }
-
-  .image-wrapper {
-    @apply relative overflow-hidden;
-  }
-  
-  .image-wrapper img {
-    @apply transition-transform duration-700 ease-out;
-  }
-  
-  .image-wrapper:hover img {
-    @apply scale-105;
-  }
-
-  .link-underline {
-    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
-  }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-  
-  .animation-delay-200 {
-    animation-delay: 200ms;
-  }
-  
-  .animation-delay-400 {
-    animation-delay: 400ms;
-  }
-  
-  .animation-delay-600 {
-    animation-delay: 600ms;
-  }
-  
-  .animation-delay-800 {
-    animation-delay: 800ms;
-  }
-}

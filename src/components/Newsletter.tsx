@@ -1,36 +1,29 @@
 
 const Newsletter = () => {
   return (
-    <section className="py-24 bg-urban-800 text-white">
-      <div className="urban-container">
-        <div className="max-w-3xl mx-auto text-center space-y-6 opacity-0 animate-fade-in">
-          <span className="text-edge-300 text-sm font-medium">JOIN THE COMMUNITY</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold">
-            Stay Connected
-          </h2>
-          <p className="text-urban-100 text-lg max-w-xl mx-auto">
-            Subscribe to receive exclusive updates on new collections, special events, and insights from our design team.
-          </p>
-          
-          <form className="mt-8 flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+    <section className="py-16 bg-gray-100">
+      <div className="max-w-xl mx-auto px-4 text-center">
+        <h2 className="text-3xl font-bold text-gray-900">Stay Connected</h2>
+        <p className="mt-4 text-gray-600">
+          Subscribe to receive updates on new collections and exclusive offers.
+        </p>
+        
+        <form className="mt-8">
+          <div className="flex flex-col sm:flex-row gap-3">
             <input
               type="email"
               placeholder="Your email address"
-              className="flex-grow px-4 py-3 bg-urban-700/70 border border-urban-600 focus:border-edge-400 focus:outline-none transition-colors"
+              className="flex-grow px-4 py-3 border border-gray-300 focus:border-blue-500 focus:outline-none"
               required
             />
             <button
               type="submit"
-              className="urban-button bg-edge-600 hover:bg-edge-700 text-white"
+              className="px-6 py-3 bg-black text-white font-medium hover:bg-gray-800 transition-colors"
             >
               Subscribe
             </button>
-          </form>
-          
-          <p className="text-urban-300 text-sm mt-4">
-            By subscribing you agree to our privacy policy. We respect your inbox and will never share your information.
-          </p>
-        </div>
+          </div>
+        </form>
       </div>
     </section>
   );

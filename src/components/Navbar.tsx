@@ -1,94 +1,50 @@
 
-import { useState, useEffect } from 'react';
-import { cn } from '@/lib/utils';
-import { ShoppingBag, Menu, X } from 'lucide-react';
+import { useState } from 'react';
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <header 
-      className={cn(
-        "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-        isScrolled 
-          ? "bg-background/80 backdrop-blur-md py-4 shadow-sm" 
-          : "bg-transparent py-6"
-      )}
-    >
-      <div className="urban-container flex items-center justify-between">
-        <a href="#" className="font-display font-bold text-2xl tracking-tight">
-          URBAN<span className="text-edge-600">EDGE</span>
-        </a>
-        
-        <nav className="hidden md:flex items-center space-x-8">
-          <a href="#collections" className="link-underline text-sm font-medium">COLLECTIONS</a>
-          <a href="#about" className="link-underline text-sm font-medium">ABOUT</a>
-          <a href="#lookbook" className="link-underline text-sm font-medium">LOOKBOOK</a>
-          <a href="#journal" className="link-underline text-sm font-medium">JOURNAL</a>
-        </nav>
-        
-        <div className="flex items-center space-x-4">
-          <button className="p-1 hover:text-edge-600 transition-colors">
-            <ShoppingBag className="h-5 w-5" />
-          </button>
+    <header className="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="flex justify-between items-center h-16">
+          <a href="#" className="font-bold text-xl text-gray-900">URBAN</a>
+          
+          <nav className="hidden md:flex items-center space-x-8">
+            <a href="#collections" className="text-gray-600 hover:text-gray-900">Collections</a>
+            <a href="#about" className="text-gray-600 hover:text-gray-900">About</a>
+            <a href="#journal" className="text-gray-600 hover:text-gray-900">Journal</a>
+            <a href="#" className="text-gray-600 hover:text-gray-900">Contact</a>
+          </nav>
           
           <button 
-            className="md:hidden p-1 hover:text-edge-600 transition-colors"
+            className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {isMenuOpen ? (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
       </div>
       
       {/* Mobile Menu */}
-      <div 
-        className={cn(
-          "md:hidden fixed inset-0 bg-background z-40 transition-transform duration-300 ease-in-out pt-20",
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
-        )}
-      >
-        <nav className="flex flex-col items-center justify-center space-y-8 h-full">
-          <a 
-            href="#collections" 
-            className="text-xl font-medium" 
-            onClick={() => setIsMenuOpen(false)}
-          >
-            COLLECTIONS
-          </a>
-          <a 
-            href="#about" 
-            className="text-xl font-medium" 
-            onClick={() => setIsMenuOpen(false)}
-          >
-            ABOUT
-          </a>
-          <a 
-            href="#lookbook" 
-            className="text-xl font-medium" 
-            onClick={() => setIsMenuOpen(false)}
-          >
-            LOOKBOOK
-          </a>
-          <a 
-            href="#journal" 
-            className="text-xl font-medium" 
-            onClick={() => setIsMenuOpen(false)}
-          >
-            JOURNAL
-          </a>
-        </nav>
-      </div>
+      {isMenuOpen && (
+        <div className="md:hidden bg-white border-t">
+          <div className="px-4 py-3 space-y-3">
+            <a href="#collections" className="block text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Collections</a>
+            <a href="#about" className="block text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>About</a>
+            <a href="#journal" className="block text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Journal</a>
+            <a href="#" className="block text-gray-600 hover:text-gray-900" onClick={() => setIsMenuOpen(false)}>Contact</a>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

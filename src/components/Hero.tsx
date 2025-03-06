@@ -1,35 +1,22 @@
 
-import { ArrowRight } from 'lucide-react';
-
 const Hero = () => {
   return (
-    <section className="min-h-screen relative flex items-center">
-      <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-gradient-to-r from-black/40 to-black/10 absolute z-10"></div>
-        <img 
-          src="https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=1471&auto=format&fit=crop"
-          alt="Urban fashion on display"
-          className="w-full h-full object-cover object-center"
-        />
-      </div>
-      
-      <div className="urban-container relative z-10">
-        <div className="max-w-xl text-white space-y-6 opacity-0 animate-fade-in">
-          <span className="inline-block text-xs uppercase tracking-wider border-b pb-1">Fall/Winter 2023</span>
-          <h1 className="font-display text-5xl md:text-6xl font-bold tracking-tight leading-tight">
-            Redefine Your Urban Aesthetic
-          </h1>
-          <p className="text-lg md:text-xl opacity-90 max-w-md leading-relaxed">
-            Where contemporary design meets the edge of urban sophistication. Crafted for those who define their own style.
-          </p>
-          <div className="pt-4 flex flex-wrap gap-4">
-            <a href="#collections" className="urban-button bg-white text-black hover:bg-urban-200">
-              Shop Collection <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
-            <a href="#about" className="urban-button-outline border-white text-white hover:bg-white hover:text-black">
-              Our Story
-            </a>
-          </div>
+    <section className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="max-w-5xl mx-auto px-4 py-16 text-center">
+        <span className="text-blue-600 font-medium text-sm uppercase tracking-wide">Urban Clothing Brand</span>
+        <h1 className="text-4xl md:text-6xl font-bold mt-4 text-gray-900">
+          Minimal. Timeless. Refined.
+        </h1>
+        <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+          Clean designs for the modern lifestyle. Quality essentials that stand the test of time.
+        </p>
+        <div className="mt-10 flex flex-wrap gap-4 justify-center">
+          <a href="#collections" className="px-6 py-3 bg-black text-white font-medium hover:bg-gray-800 transition-colors">
+            Shop Collection
+          </a>
+          <a href="#about" className="px-6 py-3 border border-black text-black font-medium hover:bg-black hover:text-white transition-colors">
+            Our Story
+          </a>
         </div>
       </div>
     </section>

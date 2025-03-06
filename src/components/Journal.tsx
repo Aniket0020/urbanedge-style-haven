@@ -1,72 +1,52 @@
 
-import { ArrowRight } from 'lucide-react';
-
-const journalEntries = [
-  {
-    id: 1,
-    title: 'The Art of Sustainable Fashion',
-    excerpt: 'Exploring how conscious design choices are reshaping the industry landscape.',
-    date: 'Oct 15, 2023',
-    image: 'https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop',
-  },
-  {
-    id: 2,
-    title: 'Urban Textures: Material Innovation',
-    excerpt: 'How technical fabrics are transforming the functionality of everyday streetwear.',
-    date: 'Sep 28, 2023',
-    image: 'https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=2070&auto=format&fit=crop',
-  },
-  {
-    id: 3,
-    title: 'The Monochrome Manifesto',
-    excerpt: 'Minimalism as a powerful form of self-expression in the age of excess.',
-    date: 'Aug 12, 2023',
-    image: 'https://images.unsplash.com/photo-1551232864-3f0890e580d9?q=80&w=1935&auto=format&fit=crop',
-  },
-];
-
 const Journal = () => {
   return (
-    <section id="journal" className="py-24">
-      <div className="urban-container">
-        <div className="flex justify-between items-end mb-16 opacity-0 animate-fade-in">
-          <div>
-            <span className="text-edge-600 text-sm font-medium">INSIGHTS</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold mt-2">
-              Journal
-            </h2>
-          </div>
-          <a href="#" className="urban-button-outline">
-            All Articles <ArrowRight className="ml-2 h-4 w-4" />
-          </a>
+    <section id="journal" className="py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <span className="text-blue-600 font-medium text-sm uppercase tracking-wide">Journal</span>
+          <h2 className="text-3xl font-bold mt-2 text-gray-900">Our Stories</h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {journalEntries.map((entry, index) => (
-            <a 
-              key={entry.id} 
-              href="#" 
-              className={`group opacity-0 animate-fade-in animation-delay-${index * 200}`}
-            >
-              <div className="image-wrapper">
-                <img 
-                  src={entry.image} 
-                  alt={entry.title}
-                  className="w-full aspect-[4/3] object-cover"
-                />
-              </div>
-              <div className="mt-6 space-y-3">
-                <span className="text-sm text-urban-500">{entry.date}</span>
-                <h3 className="font-display text-xl font-semibold group-hover:text-edge-600 transition-colors">
-                  {entry.title}
-                </h3>
-                <p className="text-urban-600">{entry.excerpt}</p>
-                <div className="pt-2 flex items-center text-sm font-medium group-hover:text-edge-600 transition-colors">
-                  Read More <ArrowRight className="ml-2 h-4 w-4" />
-                </div>
-              </div>
-            </a>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <article className="border border-gray-200">
+            <img 
+              src="https://images.unsplash.com/photo-1555529771-7888783a18d3?q=80&w=2087&auto=format&fit=crop" 
+              alt="Sustainable Fashion" 
+              className="w-full aspect-[4/3] object-cover"
+            />
+            <div className="p-6">
+              <span className="text-sm text-gray-500">October 15, 2023</span>
+              <h3 className="mt-2 text-xl font-medium text-gray-900">Sustainable Practices in Fashion</h3>
+              <p className="mt-3 text-gray-600">Exploring how conscious design choices are reshaping the industry landscape.</p>
+            </div>
+          </article>
+          
+          <article className="border border-gray-200">
+            <img 
+              src="https://images.unsplash.com/photo-1543087903-1ac2ec7aa8c5?q=80&w=2098&auto=format&fit=crop" 
+              alt="Minimalism in Design" 
+              className="w-full aspect-[4/3] object-cover"
+            />
+            <div className="p-6">
+              <span className="text-sm text-gray-500">September 28, 2023</span>
+              <h3 className="mt-2 text-xl font-medium text-gray-900">The Art of Minimalism</h3>
+              <p className="mt-3 text-gray-600">How simplicity in design creates timeless pieces for your wardrobe.</p>
+            </div>
+          </article>
+          
+          <article className="border border-gray-200">
+            <img 
+              src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop" 
+              alt="Quality Materials" 
+              className="w-full aspect-[4/3] object-cover"
+            />
+            <div className="p-6">
+              <span className="text-sm text-gray-500">August 12, 2023</span>
+              <h3 className="mt-2 text-xl font-medium text-gray-900">Quality over Quantity</h3>
+              <p className="mt-3 text-gray-600">Why investing in fewer, better pieces leads to a more sustainable wardrobe.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
