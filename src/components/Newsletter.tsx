@@ -1,14 +1,14 @@
 
 const Newsletter = () => {
   return (
-    <section className="py-24 bg-urban-900 text-white">
+    <section className="py-24 bg-urban-800 text-white">
       <div className="urban-container">
         <div className="max-w-3xl mx-auto text-center space-y-6 opacity-0 animate-fade-in">
-          <span className="text-edge-400 text-sm font-medium">JOIN THE COMMUNITY</span>
+          <span className="text-edge-300 text-sm font-medium">JOIN THE COMMUNITY</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold">
             Stay Connected
           </h2>
-          <p className="text-urban-300 text-lg max-w-xl mx-auto">
+          <p className="text-urban-100 text-lg max-w-xl mx-auto">
             Subscribe to receive exclusive updates on new collections, special events, and insights from our design team.
           </p>
           
@@ -16,18 +16,18 @@ const Newsletter = () => {
             <input
               type="email"
               placeholder="Your email address"
-              className="flex-grow px-4 py-3 bg-urban-800 border border-urban-700 focus:border-edge-400 focus:outline-none transition-colors"
+              className="flex-grow px-4 py-3 bg-urban-700 border border-urban-600 focus:border-edge-400 focus:outline-none transition-colors"
               required
             />
             <button
               type="submit"
-              className="urban-button bg-edge-600 hover:bg-edge-700 text-white"
+              className="urban-button bg-edge-500 hover:bg-edge-600 text-white"
             >
               Subscribe
             </button>
           </form>
           
-          <p className="text-urban-400 text-sm mt-4">
+          <p className="text-urban-300 text-sm mt-4">
             By subscribing you agree to our privacy policy. We respect your inbox and will never share your information.
           </p>
         </div>
