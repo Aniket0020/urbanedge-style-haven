@@ -16,12 +16,12 @@ const Newsletter = () => {
             <input
               type="email"
               placeholder="Your email address"
-              className="flex-grow px-4 py-3 bg-urban-700 border border-urban-600 focus:border-edge-400 focus:outline-none transition-colors"
+              className="flex-grow px-4 py-3 bg-urban-700/70 border border-urban-600 focus:border-edge-400 focus:outline-none transition-colors"
               required
             />
             <button
               type="submit"
-              className="urban-button bg-edge-500 hover:bg-edge-600 text-white"
+              className="urban-button bg-edge-600 hover:bg-edge-700 text-white"
             >
               Subscribe
             </button>
