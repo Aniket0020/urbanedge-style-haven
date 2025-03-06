@@ -7,21 +7,21 @@ const journalEntries = [
     title: 'The Art of Sustainable Fashion',
     excerpt: 'Exploring how conscious design choices are reshaping the industry landscape.',
     date: 'Oct 15, 2023',
-    image: 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?q=80&w=1740&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop',
   },
   {
     id: 2,
     title: 'Urban Textures: Material Innovation',
     excerpt: 'How technical fabrics are transforming the functionality of everyday streetwear.',
     date: 'Sep 28, 2023',
-    image: 'https://images.unsplash.com/photo-1543087903-1ac2ec7aa8c5?q=80&w=1798&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=2070&auto=format&fit=crop',
   },
   {
     id: 3,
     title: 'The Monochrome Manifesto',
     excerpt: 'Minimalism as a powerful form of self-expression in the age of excess.',
     date: 'Aug 12, 2023',
-    image: 'https://images.unsplash.com/photo-1517677129300-07b130802f46?q=80&w=1750&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1551232864-3f0890e580d9?q=80&w=1935&auto=format&fit=crop',
   },
 ];
 

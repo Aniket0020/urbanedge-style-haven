@@ -27,7 +27,7 @@ const About = () => {
           
           <div className="relative opacity-0 animate-fade-in animation-delay-400">
             <img 
-              src="https://images.unsplash.com/photo-1485125639709-a60c3a500bf1?q=80&w=2070&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?q=80&w=1965&auto=format&fit=crop" 
               alt="UrbanEdge atelier" 
               className="w-full h-[600px] object-cover"
             />

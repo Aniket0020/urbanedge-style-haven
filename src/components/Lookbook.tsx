@@ -3,12 +3,12 @@ import { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const images = [
-  'https://images.unsplash.com/photo-1550614000-4895a10e1bfd?q=80&w=1887&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1920&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1887&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=2073&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1516522973472-f009f23bba59?q=80&w=1887&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1888&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=1935&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1617551307578-7985955e7a62?q=80&w=1974&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1475180098004-ca77a66827be?q=80&w=1936&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1554412933-514a83d2f3c8?q=80&w=1972&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1583846783214-7229a91b20ed?q=80&w=1935&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=1974&auto=format&fit=crop',
 ];
 
 const Lookbook = () => {

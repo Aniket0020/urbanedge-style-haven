@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <div className="w-full h-full bg-gradient-to-r from-black/40 to-black/10 absolute z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?q=80&w=2070&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=1471&auto=format&fit=crop"
           alt="Urban fashion on display"
           className="w-full h-full object-cover object-center"
         />
